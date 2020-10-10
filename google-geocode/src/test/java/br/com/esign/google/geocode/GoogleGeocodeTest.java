@@ -23,7 +23,7 @@ public class GoogleGeocodeTest {
 
 	@Test
 	public void testGetResponseObject2() throws IOException {
-		final String address = "R. 7 de Abril, 346 - Centro Histórico de São Paulo, São Paulo - SP, 01044-000, Brasil";
+		final String address = "R. Sete de Abril, 346 - Centro Histórico de São Paulo, São Paulo - SP, 01044-000, Brasil";
 		GoogleGeocode googleGeocode = new GoogleGeocode(apiKey, address);
 		googleGeocode.setLanguage(GoogleGeocodeLanguage.PORTUGUESE_BRAZIL);
 		GeocodeResponse geocodeResponse = googleGeocode.getResponseObject();
