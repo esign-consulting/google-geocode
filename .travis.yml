@@ -17,7 +17,7 @@ before_install:
 - gpg --fast-import codesigning.asc
 
 script:
-- mvn clean test sonar:sonar -Dgoogle.geocode.api.key=$GOOGLE_GEOCODE_API_KEY -f google-geocode
+- mvn clean install sonar:sonar -Dgoogle.geocode.api.key=$GOOGLE_GEOCODE_API_KEY -f google-geocode
 
 cache:
   directories:
