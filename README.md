@@ -6,13 +6,13 @@ Simple Java library for the [Google Geocoding API](https://developers.google.com
 
 ## pom.xml
 
-The library is distributed from the Maven Central Repository since the release of the version 2.0. Just include the following dependency in your pom.xml in order to use the library:
+The library is provided through Maven since the release of the version 2.0.0. Starting in the version 3.0.0, it is compiled with Java 11. Just include the following dependency in your pom.xml:
 
 ```xml
 <dependency>
     <groupId>br.com.esign</groupId>
     <artifactId>google-geocode</artifactId>
-    <version>2.0.2</version>
+    <version>3.0.0</version>
 </dependency>
 ```
 
