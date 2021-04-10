@@ -30,6 +30,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 import br.com.esign.google.geocode.model.GeocodeResponse;
 
@@ -75,13 +76,13 @@ public class GoogleGeocode {
 		if (reverse) {
 			httpUrl.append("latlng=").append(lat).append(",").append(lng);
 		} else {
-			httpUrl.append("address=").append(URLEncoder.encode(address, "utf-8"));
+			httpUrl.append("address=").append(URLEncoder.encode(address, StandardCharsets.UTF_8));
 		}
 		return httpUrl.toString();
 	}
 
 	private String getJsonString(InputStream inputStream) throws IOException {
-		BufferedReader in = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));
+		BufferedReader in = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
 		StringBuilder out = new StringBuilder();
 		String line;
 		while ((line = in.readLine()) != null) {
