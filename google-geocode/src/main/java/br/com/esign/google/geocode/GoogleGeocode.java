@@ -67,7 +67,7 @@ public class GoogleGeocode {
 		return getJsonString(conn.getInputStream());
 	}
 
-	private String getHttpUrl() throws IOException {
+	private String getHttpUrl() {
 		StringBuilder httpUrl = new StringBuilder("https://maps.googleapis.com/maps/api/geocode/json?sensor=false&");
 		if (languageCode != null && !languageCode.isEmpty()) {
 			httpUrl.append("language=").append(languageCode).append("&");
