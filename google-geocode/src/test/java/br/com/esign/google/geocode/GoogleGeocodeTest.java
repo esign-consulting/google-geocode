@@ -12,11 +12,11 @@ import br.com.esign.google.geocode.model.GeocodeResponse;
 
 public class GoogleGeocodeTest {
 	
-	private final static String apiKey = System.getProperty("google.geocode.api.key");
+	private static final String API_KEY = System.getProperty("google.geocode.api.key");
 
 	@Test
 	public void testGetResponseObject1() throws IOException, URISyntaxException {
-		GoogleGeocode googleGeocode = new GoogleGeocode(apiKey, "-23.544969", "-46.641846");
+		GoogleGeocode googleGeocode = new GoogleGeocode(API_KEY, "-23.544969", "-46.641846");
 		GeocodeResponse geocodeResponse = googleGeocode.getResponseObject();
 		assertNotNull(geocodeResponse);
 		assertTrue(geocodeResponse.isStatusOK());
@@ -25,7 +25,7 @@ public class GoogleGeocodeTest {
 	@Test
 	public void testGetResponseObject2() throws IOException, URISyntaxException {
 		final String address = "R. Sete de Abril, 346 - República, São Paulo - SP, 01044-000, Brasil";
-		GoogleGeocode googleGeocode = new GoogleGeocode(apiKey, address);
+		GoogleGeocode googleGeocode = new GoogleGeocode(API_KEY, address);
 		googleGeocode.setLanguage(GoogleGeocodeLanguage.PORTUGUESE_BRAZIL);
 		GeocodeResponse geocodeResponse = googleGeocode.getResponseObject();
 		assertNotNull(geocodeResponse);
