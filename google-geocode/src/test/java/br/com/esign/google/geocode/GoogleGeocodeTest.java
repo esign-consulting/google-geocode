@@ -23,7 +23,7 @@ public class GoogleGeocodeTest {
 
 	@Test
 	public void testGetResponseObject2() throws IOException {
-		final String address = "R. Sete de Abril, 346 - Centro Histórico de São Paulo, São Paulo - SP, 01044-000, Brasil";
+		final String address = "R. Sete de Abril, 346 - República, São Paulo - SP, 01044-000, Brasil";
 		GoogleGeocode googleGeocode = new GoogleGeocode(apiKey, address);
 		googleGeocode.setLanguage(GoogleGeocodeLanguage.PORTUGUESE_BRAZIL);
 		GeocodeResponse geocodeResponse = googleGeocode.getResponseObject();
@@ -31,7 +31,7 @@ public class GoogleGeocodeTest {
 		assertTrue(geocodeResponse.isStatusOK());
 		assertEquals(address, geocodeResponse.getFormattedAddress());
 		assertEquals("346", geocodeResponse.getAddressComponentByType(AddressComponentType.STREET_NUMBER).getShortName());
-		assertEquals("Centro Histórico de São Paulo", geocodeResponse.getSublocalityLongName());
+		assertEquals("República", geocodeResponse.getSublocalityLongName());
 		assertEquals("São Paulo", geocodeResponse.getAdministrativeAreaLevel2LongName());
 		assertEquals("BR", geocodeResponse.getCountryShortName());
 	}

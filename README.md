@@ -1,6 +1,9 @@
 # google-geocode
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build status](https://travis-ci.org/esign-consulting/google-geocode.svg?branch=master)](https://travis-ci.org/esign-consulting/google-geocode) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=br.com.esign%3Agoogle-geocode&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=br.com.esign%3Agoogle-geocode) [![Known Vulnerabilities](https://snyk.io/test/github/esign-consulting/google-geocode/badge.svg?targetFile=google-geocode/pom.xml)](https://snyk.io/test/github/esign-consulting/google-geocode?targetFile=google-geocode/pom.xml) [![GitHub tag](https://img.shields.io/github/tag/esign-consulting/google-geocode.svg)](https://github.com/esign-consulting/google-geocode/releases/latest) [![Maven Central](https://img.shields.io/maven-central/v/br.com.esign/google-geocode.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22br.com.esign%22%20AND%20a:%22google-geocode%22)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=esign-consulting_google-geocode&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=esign-consulting_google-geocode)
+[![GitHub tag](https://img.shields.io/github/tag/esign-consulting/google-geocode.svg)](https://github.com/esign-consulting/google-geocode/releases/latest)
+[![Maven Central](https://img.shields.io/maven-central/v/br.com.esign/google-geocode.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22br.com.esign%22%20AND%20a:%22google-geocode%22)
 
 Simple Java library for the [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/start).
 
