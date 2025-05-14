@@ -27,6 +27,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
@@ -61,8 +63,9 @@ public class GoogleGeocode {
 		this.languageCode = language.getCode();
 	}
 	
-	public String getJsonString() throws IOException {
-		URL url = new URL(getHttpUrl());
+	public String getJsonString() throws IOException, URISyntaxException {
+		URI uri = new URI(getHttpUrl());
+		URL url = uri.toURL();
 		URLConnection conn = url.openConnection();
 		return getJsonString(conn.getInputStream());
 	}
@@ -91,7 +94,7 @@ public class GoogleGeocode {
 		return out.toString();
 	}
 	
-	public GeocodeResponse getResponseObject() throws IOException {
+	public GeocodeResponse getResponseObject() throws IOException, URISyntaxException {
 		String json = getJsonString();
 		ObjectMapper mapper = new ObjectMapper();
 		return mapper.readValue(json, GeocodeResponse.class);
